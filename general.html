@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./src/css/output.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+	</head>
+	<body class="bg-brand-gray">
+		<div class="container my-20">
+			<div class="main__wrapper py-12 px-8 w-full md:w-10/12 mx-auto bg-brand-light rounded-2xl">
+				<div class="w-full" id="n8n-chat">
+					<script type="module">
+						import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+						createChat({
+							webhookUrl: "https://simianlab.app.n8n.cloud/webhook/64e2298e-d902-4242-a2ac-e595ee3580ea/chat",
+							initialMessages: ["Hola 👋", "Mi nombre es Javier. ¿Como puedo ayudarte hoy?"],
+							mode: "fullscreen",
+							target: "#n8n-chat",
+							i18n: {
+								en: {
+									title: "Información General Uexternado! 👋",
+									subtitle: "Inicia un chat. Estamos aquí para ayudarte 24/7.",
+									footer: "",
+									getStarted: "Nueva Conversación",
+									inputPlaceholder: "Escribe tu pregunta..",
+								},
+							},
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
